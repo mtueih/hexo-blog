@@ -43,17 +43,19 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
+syntax_highlighter: prismjs
 highlight:
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
+  exclude_languages: ['mermaid']
 prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+  exclude_languages: ['mermaid']
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -102,3 +104,13 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+markdown:
+  plugins:
+    - '@renbaoshuo/markdown-it-katex'
+
+search:
+  path: search.json
+  field: post
+  content: true
+  format: striptags
