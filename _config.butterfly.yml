@@ -469,7 +469,7 @@ comments:
   # Display comment count in post's top_img
   count: true
   # Display comment count in Home Page
-  card_post_count: true
+  card_post_count: false
 
 # Waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
@@ -501,16 +501,16 @@ microsoft_clarity:
 umami_analytics:
   enable: true
   # For self-hosted setups, configure the hostname of the Umami instance
-  serverURL: https://cloud.umami.is
+  serverURL: https://umami.mtueih.com
   script_name: script.js
-  website_id: 50ed9918-94ab-49af-bcc1-fa0d22781035
+  website_id: 54aff98e-4d0d-4976-8d2f-62e1435c436d
   option:
   UV_PV:
     site_uv: true
     site_pv: true
     page_pv: true
     # Umami Cloud (API key) / self-hosted Umami (token)
-    token: api_rx9yXBlQHPxu84sHxeW4PCBnCiaoCvtp
+    token: dwWg1uEBniuN8kL95SPS3MVGynRV264Ep70lp8B0DzUWP8NF7Qd09mMPNW9Q9IvOe/7DdehbgnLsGSqkY7ar4gOPSI78EgInxn4OOed7rI25PR4dbEx79Hpe8rNoW32i7vXzO0gVZccZqgSDdiAfL54tDBHFKSPv0ooUXW9oVQoQbiGd7UtC4hLmTfLZ4PcZw72ynkfip16MH5wH5DVK5riv7CHBUXLBBkx4IZiPo31vQ3i+INRKd74WKqmGfBA2ztXG56pmx0w20pq0D1usLdLq7OxPfvaFWVwmRKCpiGt8UoQ56Or3oCB8KDwXXhS4xlwNvCh+CXfLBUp6tLJyui8/CnAd318zLRc6FKI647Ta1ueGHAju39NPXNGy
 
 # https://www.googletagmanager.com/
 google_tag_manager:
