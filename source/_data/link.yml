@@ -1,0 +1,31 @@
+- class_name: 本站相关
+  class_desc: 构建本站所使用的工具等。
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-cn/
+      avatar: https://hexo.io/logo.svg
+      descr: 快速、简洁且高效的博客框架。
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: /img/butterfly-icon.png
+      descr: 适用于 Hexo 的简约卡片式 UI 设计主题。
+    - name: GitHub
+      link: https://github.com/
+      avatar: https://github.githubassets.com/favicons/favicon.svg
+      descr: 全球最大的代码托管平台。
+    - name: Cloudflare
+      link: https://www.cloudflare.com/zh-cn/
+      avatar: https://www.cloudflare.com/favicon.ico
+      descr: 全球领先的 CDN 和网络安全服务提供商。
+    - name: Vercel
+      link: https://vercel.com/
+      avatar: https://assets.vercel.com/image/upload/front/favicon/vercel/favicon.ico
+      descr: 专为前端开发者打造的云平台。
+    - name: Waline
+      link: https://waline.js.org/
+      avatar: https://waline.js.org/favicon.ico
+      descr: 一款简洁、高效且易于使用的评论系统。
+    - name: Umami
+      link: https://umami.is/
+      avatar: https://1ktools.com/api/tools/favicon?domain=umami.is&size=256
+      descr: 一款开源且注重隐私的网站分析工具。

@@ -69,7 +69,18 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  "教程": "tutorial"
+  "软件安装": "software-installation"
+  "编程": "programming"
+  "C/C++": "c-cpp"
+  "环境搭建": "environment-setup"
 tag_map:
+  "MinGW-w64": "mingw-w64"
+  "GCC": "gcc"
+  "MSYS2": "msys2"
+  "Windows": "windows"
+  "C": "c"
+  "C++": "cpp"
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -114,3 +125,25 @@ search:
   field: post
   content: true
   format: striptags
+
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 256
+  content_limit_delim: ' '
+  order_by: -date
+  icon: /img/langmoyu-logo-favicon.webp
+  autodiscovery: true
+
+nofollow:
+  enable: true
+  field: site
+  exclude:
+
+sitemap:
+  path: sitemap.xml
+  rel: false

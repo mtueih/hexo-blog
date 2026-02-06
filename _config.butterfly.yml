@@ -48,7 +48,7 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  fab fa-github: https://github.com/mtueih || Github || '#24292e'
+  # fab fa-github: https://github.com/mtueih || Github || '#24292e'
   fas fa-envelope: mailto:mtueih.org@outlook.com || Email || '#4a7dbe'
 
 # --------------------------------------
@@ -114,7 +114,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: false
-  subtitle: 'Page Not Found'
+  subtitle: '页面没有找到'
   background: /img/error-page.png
 
 post_meta:
@@ -161,6 +161,7 @@ subtitle:
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
     - 且听且忘且随风，且行且看且从容。
+    - 少年不识愁滋味，爱上层楼。爱上层楼，为赋新词强说愁。而今识尽愁滋味，欲说还休。欲说还休，却道“天凉好个秋”！
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -420,7 +421,7 @@ search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
   use: local_search
-  placeholder: Search...
+  placeholder: 搜索文章……
 
   # Local Search
   local_search:
@@ -642,7 +643,7 @@ mermaid:
 # chartjs
 # see https://www.chartjs.org/docs/latest/
 chartjs:
-  enable: false
+  enable: true
   # Do not modify unless you understand how they work.
   # The default settings are only used when the MD syntax is not specified.
   # General font color for the chart
