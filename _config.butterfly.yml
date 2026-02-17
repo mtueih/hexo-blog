@@ -227,7 +227,7 @@ related_post:
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
-post_pagination: false
+post_pagination: 2
 
 # Displays outdated notice for a post
 noticeOutdate:
@@ -277,11 +277,11 @@ aside:
     button:
       enable: true
       icon: fab fa-github
-      text: 我的 Github
+      text: 我的 Github 主页
       link: https://github.com/mtueih
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 欢迎访问我的博客，获取更多技术干货和文章更新！
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -294,14 +294,14 @@ aside:
     sort_order:
     limit: 8
     # Unit: mins, save data to localStorage
-    storage: 10
+    storage: 1
     avatar: true
   card_categories:
     enable: true
     # If set 0 will show all
     limit: 8
     # Choose: none / true / false
-    expand: none
+    expand: true
     sort_order:
   card_tags:
     enable: true
@@ -450,7 +450,7 @@ share:
   # AddToAny
   # https://www.addtoany.com/
   addtoany:
-    item: facebook,x,wechat,sina_weibo,facebook_messenger,email,copy_link
+    item: facebook,x,wechat,email,copy_link
 
 # --------------------------------------
 # Comments System
@@ -470,7 +470,7 @@ comments:
   # Display comment count in post's top_img
   count: true
   # Display comment count in Home Page
-  card_post_count: false
+  card_post_count: true
 
 # Waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
@@ -614,7 +614,7 @@ hr_icon:
 # https://github.com/francoischalifour/medium-zoom
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
-lightbox: medium_zoom
+lightbox: fancybox
 
 # --------------------------------------
 # Tag Plugins settings
