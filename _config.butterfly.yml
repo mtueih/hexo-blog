@@ -31,7 +31,7 @@ menu:
 
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
-  theme: light
+  theme: false
   macStyle: false
   # Code block height limit (unit: px)
   height_limit: 512
@@ -717,6 +717,8 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/self/prism-solarizedlight.css">
+    - <link rel="stylesheet" href="/self/prism-solarized-dark-atom.css">
   bottom:
     # - <script src="xxxx"></script>
 
