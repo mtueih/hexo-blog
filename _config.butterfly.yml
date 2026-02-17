@@ -113,8 +113,8 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
-  subtitle: '页面没有找到'
+  enable: true
+  subtitle: 页面没有找到
   background: /img/error-page.png
 
 post_meta:
@@ -123,7 +123,7 @@ post_meta:
     # Choose: created / updated / both
     date_type: created
     # Choose: date / relative
-    date_format: date
+    date_format: relative
     categories: true
     tags: false
     label: true

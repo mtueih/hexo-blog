@@ -1,14 +1,14 @@
 ---
-title: 在 Windows 平台上搭建 C/C++ 编译环境（MSYS2 + MinGW-w64）保姆级教程
+title: 在 Windows 平台上搭建 C/C++ 编译环境（MSYS2 + MinGW-w64）
 date: 2026-02-05 21:24:23
 permalink: /mingw-windows-tutorial/
 tags: ["Windows", "C", "C++", "MinGW-w64", "MSYS2", "GCC"]
 categories: ["编程", "C/C++", "环境搭建"]
 description: 详细介绍如何在 Windows 平台上使用 MSYS2 搭建 MinGW-w64 GCC 编译环境，包括 MSYS2 安装、MinGW-w64 工具链选择、环境变量配置及后续更新维护。
-cover:
+cover: /img/mingw-windows-tutorial/21-verify-gcc.webp
 ---
 
-## ➤ 什么是 C/C++ 编译环境
+## ➤ 什么是 C/C++ 编译环境（了解请跳过）
 
 ### ➥ 编译环境与开发环境的区别
 
@@ -70,7 +70,6 @@ Linux 平台往往自带 C/C++ 的编译环境，即使没有，搭建它也非�
 - w64devkit，极简、便捷的 GCC 工具链；
 - WinLibs，同时支持 GCC 和 Clang。
 
-
 {% note 'fas fa-lightbulb' %}
 严格意义上来说，MinGW-w64 与 GCC 没有直接关系，通常我们认为的，以及本文大部分情况所说的 MinGW-w64 是完整的 GCC 工具链，这是由于 MinGW-w64 的前身 MinGW 提供完整的 GCC 工具链，而 MinGW-w64 只包含前文所述编译工具链的标准库部分。下图是[官网](https://www.mingw-w64.org/)的介绍：
 
@@ -106,23 +105,23 @@ winget install MSYS2.MSYS2
 
 ![从 MSYS2 官网下载安装包](/img/mingw-windows-tutorial/03-msys2-download.webp)
 
-2. 下载完成后，打开安装包，欢迎界面，点【Next】：
+1. 下载完成后，打开安装包，欢迎界面，点【Next】：
 
 ![MSYS2 安装步骤：欢迎界面](/img/mingw-windows-tutorial/04-msys2-welcome.webp)
 
-3. 选择安装路径界面，{% label 建议保持默认 green %}，如果要修改也最好保证安装路径不要有中文和空格，然后点击【Next】：
+1. 选择安装路径界面，{% label 建议保持默认 green %}，如果要修改也最好保证安装路径不要有中文和空格，然后点击【Next】：
 
 ![MSYS2 安装步骤：选择安装路径](/img/mingw-windows-tutorial/05-msys2-path.webp)
 
-4. 选择开始菜单文件夹界面，保持默认，然后点击【Next】：
+1. 选择开始菜单文件夹界面，保持默认，然后点击【Next】：
 
 ![MSYS2 安装步骤：选择开始菜单文件夹](/img/mingw-windows-tutorial/06-msys2-startmenu.webp)
 
-5. 等待安装：
+1. 等待安装：
 
 ![MSYS2 安装步骤：等待安装](/img/mingw-windows-tutorial/07-msys2-installing.webp)
 
-6. 安装完成，【Run MSYS now.】（安装过程结束后立即运行 MSYS2）可勾可不勾，然后点击【Finish】：
+1. 安装完成，【Run MSYS now.】（安装过程结束后立即运行 MSYS2）可勾可不勾，然后点击【Finish】：
 
 ![MSYS2 安装步骤：完成](/img/mingw-windows-tutorial/08-msys2-finish.webp)
 
@@ -138,10 +137,9 @@ pacman -Syu
 
 ![MSYS2 更新完成](/img/mingw-windows-tutorial/09-msys2-update.webp)
 
-2. 安装 MinGW-w64：
+1. 安装 MinGW-w64：
 
 MSYS2 提供了 3 种使用 GCC 的 MinGW-w64 工具链，分别是：
-
 
 | 工具链 | 包名 |
 | --- | --- |
@@ -176,7 +174,7 @@ pacman -S mingw-w64-ucrt-x86_64-gcc
 
 ![MSYS2 安装路径下的文件夹](/img/mingw-windows-tutorial/10-msys2-folders.webp)
 
-2. 选择你所安装的工具链对应的文件夹，这里以 `ucrt64` 为例，该文件夹下的 `bin` 文件夹的路径，就是我们要添加到 Path 变量中的值：
+1. 选择你所安装的工具链对应的文件夹，这里以 `ucrt64` 为例，该文件夹下的 `bin` 文件夹的路径，就是我们要添加到 Path 变量中的值：
 
 ![MinGW-w64 安装路径下的 bin 文件夹](/img/mingw-windows-tutorial/11-bin-folder.webp)
 
@@ -188,7 +186,7 @@ pacman -S mingw-w64-ucrt-x86_64-gcc
 
 ![配置 Windows 环境变量：运行窗口输入 sysdm.cpl](/img/mingw-windows-tutorial/12-env-run.webp)
 
-2. 依次点击【高级】、【环境变量】，找到【系统变量】的【Path】变量，双击它：
+1. 依次点击【高级】、【环境变量】，找到【系统变量】的【Path】变量，双击它：
 
 ![配置 Windows 环境变量：点击高级](/img/mingw-windows-tutorial/13-env-advanced.webp)
 
@@ -196,13 +194,13 @@ pacman -S mingw-w64-ucrt-x86_64-gcc
 
 ![配置 Windows 环境变量：找到系统 Path 变量](/img/mingw-windows-tutorial/15-env-path.webp)
 
-3. 然后点击【新建】，粘贴刚才的路径，回车：
+1. 然后点击【新建】，粘贴刚才的路径，回车：
 
 ![配置 Windows 环境变量：点击新建](/img/mingw-windows-tutorial/16-env-new.webp)
 
 ![配置 Windows 环境变量：粘贴路径](/img/mingw-windows-tutorial/17-env-paste.webp)
 
-4. 依次点击 3 次【确定】：
+1. 依次点击 3 次【确定】：
 
 ![配置 Windows 环境变量：点击确定 1](/img/mingw-windows-tutorial/18-env-ok-1.webp)
 
