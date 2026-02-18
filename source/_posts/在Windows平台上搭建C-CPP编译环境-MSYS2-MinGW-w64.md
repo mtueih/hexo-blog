@@ -1,7 +1,7 @@
 ---
 title: 在 Windows 平台上搭建 C/C++ 编译环境（MSYS2 + MinGW-w64）
 date: 2026-02-05 21:24:23
-permalink: /mingw-windows-tutorial/
+titleSlugified: mingw-windows-tutorial
 tags: ["Windows", "C", "C++", "MinGW-w64", "MSYS2", "GCC"]
 categories: ["编程", "C/C++", "环境搭建"]
 description: 详细介绍如何在 Windows 平台上使用 MSYS2 搭建 MinGW-w64 GCC 编译环境，包括 MSYS2 安装、MinGW-w64 工具链选择、环境变量配置及后续更新维护。

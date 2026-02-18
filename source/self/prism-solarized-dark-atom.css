@@ -1,11 +1,11 @@
 [data-theme="dark"] {
 	--hl-color: #839496;
 	--hl-bg: #002b36;
-	/* --hltools-color: #61767d;
-	--hltools-bg: #fae8b8;
-	--hlnumber-color: #8a9ea5;
-	--hlnumber-bg: #fdf6e3;
-	--hlexpand-bg: #fbeecb; */
+	/* --hltools-color: #a1aeb0;
+	--hltools-bg: #002731;
+	--hlnumber-color: #a1aeb0;
+	--hlnumber-bg: #002b36;
+	--hlexpand-bg: #002731; */
 }
 
 
@@ -108,7 +108,7 @@
 
 /*  */
 
-[data-theme="dark"] .container pre > code,
+[data-theme="dark"] .container pre>code,
 [data-theme="dark"] .container code {
-    background: var(--hl-bg);
+	background: var(--hl-bg);
 }

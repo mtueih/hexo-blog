@@ -1,6 +1,6 @@
 ---
 title: {{ title }}
-permalink:
+titleSlugified:
 date: {{ date }}
 tags:
 categories:

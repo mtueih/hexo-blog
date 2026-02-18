@@ -4,9 +4,6 @@
 
 # Site
 title: 狼魔宇个人博客
-subtitle:
-description: 狼魔宇个人博客 - 技术分享与学习笔记，专注于编程开发、软件安装教程及环境搭建指南。
-keywords: 狼魔宇,个人博客,技术分享,编程开发,软件安装,环境搭建,C/C++,MinGW-w64,MSYS2,GCC,Windows,C语言,C++语言,教程,学习笔记
 author: 狼魔宇
 language: zh-CN
 timezone: Asia/Shanghai
@@ -14,11 +11,10 @@ timezone: Asia/Shanghai
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://www.mtueih.com
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink: blog/:titleSlugified/
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -114,7 +110,9 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repository: git@github.com:mtueih/mtueih.github.io.git
+  branch: main
 
 # Extensions
 

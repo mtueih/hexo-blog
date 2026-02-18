@@ -1,11 +1,11 @@
 [data-theme="light"] {
 	--hl-color: #657b83;
 	--hl-bg: #fdf6e3;
-	--hltools-color: #61767d;
+	/* --hltools-color: #8a9ea5;
 	--hltools-bg: #fae8b8;
 	--hlnumber-color: #8a9ea5;
 	--hlnumber-bg: #fdf6e3;
-	--hlexpand-bg: #fbeecb;
+	--hlexpand-bg: #fbeecb; */
 }
 
 [data-theme="light"] .token.comment,
