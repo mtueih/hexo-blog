@@ -57,102 +57,39 @@ error_404:
 
 
 post_meta:
-  # Home Page
   page:
-    # Choose: created / updated / both
-    date_type: created
-    # Choose: date / relative
     date_format: relative
-    categories: true
-    tags: false
-    label: true
+    label: false
   post:
-    # Choose: left / center
     position: center
-    # Choose: created / updated / both
-    date_type: both
-    # Choose: date / relative
-    date_format: date
-    categories: true
-    tags: true
-    label: true
 
 # --------------------------------------
 # Index page settings
 # --------------------------------------
-
 # The subtitle on homepage
 subtitle:
   enable: true
-  # Typewriter Effect
-  effect: true
-  # Customize typed.js
-  # https://github.com/mattboldt/typed.js/#customization
-  typed_option:
-  # Source - Call the third-party service API (Chinese only)
-  # It will show the source first, then show the content of sub
-  # Choose: false/1/2/3
-  # false - disable the function
-  # 1 - hitokoto.cn
-  # 2 - https://api.aa1.cn/doc/yiyan.html
-  # 3 - jinrishici.com
-  source: false
-  # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
     - 且听且忘且随风，且行且看且从容。
     - 少年不识愁滋味，爱上层楼。爱上层楼，为赋新词强说愁。而今识尽愁滋味，欲说还休。欲说还休，却道“天凉好个秋”！
 
-# Article layout on the homepage
-# 1: Cover on the left, info on the right
-# 2: Cover on the right, info on the left
-# 3: Cover and info alternate between left and right
-# 4: Cover on top, info on the bottom
-# 5: Info displayed on the cover
-# 6: Masonry layout - Cover on top, info on the bottom
-# 7: Masonry layout - Info displayed on the cover
 index_layout: 2
 
-# Display the article introduction on homepage
-# 1: description
-# 2: both (if the description exists, it will show description, or show the auto_excerpt)
-# 3: auto_excerpt (default)
-# false: do not show the article introduction
 index_post_content:
   method: 2
-  # If you set method to 2 or 3, the length need to config
-  length: 512
+  length: 256
 
 # --------------------------------------
 # Post Settings
 # --------------------------------------
-
 toc:
-  post: true
-  page: false
   number: false
-  expand: false
-  # Only for post
-  style_simple: false
-  scroll_percent: true
+  style_simple: true
 
 post_copyright:
-  enable: true
   decode: true
-  author_href:
-  license: CC BY-NC-SA 4.0
-  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  author_href: https://github.com/mtueih/
 
-# Sponsor/reward
-reward:
-  enable: false
-  text:
-  QR_code:
-    # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
 
 # Related Articles
 related_post:
