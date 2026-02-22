@@ -23,15 +23,23 @@ function mergeFolder(sourceDir, targetDir) {
     });
 }
 
-const publicDir = path.join(__dirname, 'public');
-const imgDir = path.join(publicDir, 'img');
-const unusedDir = path.join(publicDir, 'images', 'unused');
-const cssDir = path.join(publicDir, 'css');
-const jsDir = path.join(publicDir, 'js');
-const stylesDir = path.join(publicDir, 'styles');
-const scriptsDir = path.join(publicDir, 'scripts');
+function getHtmlFiles(dir) {
+    let htmlFiles = [];
+    const files = fs.readdirSync(dir, { withFileTypes: true });
+    files.forEach(file => {
+        const filePath = path.join(dir, file.name);
+        if (file.isDirectory()) {
+            htmlFiles = htmlFiles.concat(getHtmlFiles(filePath));
+        } else if (file.name.endsWith('.html')) {
+            htmlFiles.push(filePath);
+        }
+    });
+    return htmlFiles;
+}
 
 // 判断 public 文件夹存在且不为空
+const publicDir = path.join(__dirname, 'public');
+
 if (fs.existsSync(publicDir) && fs.readdirSync(publicDir).length > 0) {
     console.log(`Folder「${publicDir}」exists and is not empty.`);
 } else {
@@ -40,6 +48,9 @@ if (fs.existsSync(publicDir) && fs.readdirSync(publicDir).length > 0) {
 }
 
 // 删除 public/img 和 public/images/unused 文件夹
+const imgDir = path.join(publicDir, 'img');
+const unusedDir = path.join(publicDir, 'images', 'unused');
+
 if (fs.existsSync(imgDir)) {
     fs.rmSync(imgDir, { recursive: true, force: true });
     console.log(`Folder「${imgDir}」removed.`);
@@ -51,6 +62,9 @@ if (fs.existsSync(unusedDir)) {
 }
 
 // 重命名 public/css 和 public/js 文件夹
+const cssDir = path.join(publicDir, 'css');
+const stylesDir = path.join(publicDir, 'styles');
+
 if (fs.existsSync(cssDir)) {
     if (!fs.existsSync(stylesDir)) {
         fs.renameSync(cssDir, stylesDir);
@@ -62,6 +76,9 @@ if (fs.existsSync(cssDir)) {
     }
 }
 
+const jsDir = path.join(publicDir, 'js');
+const scriptsDir = path.join(publicDir, 'scripts');
+
 if (fs.existsSync(jsDir)) {
     if (!fs.existsSync(scriptsDir)) {
         fs.renameSync(jsDir, scriptsDir);
@@ -72,3 +89,13 @@ if (fs.existsSync(jsDir)) {
         console.log(`Folder「${jsDir}」merged into「${scriptsDir}」 and removed.`);
     }
 }
+
+const htmlFiles = getHtmlFiles(publicDir);
+
+htmlFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf-8');
+    content = content.replace(/href="\/css\//g, 'href="/styles/');
+    content = content.replace(/src="\/js\//g, 'src="/scripts/');
+    fs.writeFileSync(file, content, 'utf-8');
+    console.log(`Updated paths in「${file}」.`);
+});
