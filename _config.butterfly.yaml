@@ -826,8 +826,8 @@ beautify:
 font:
   global_font_size:
   code_font_size:
-  font_family: '"Resource Han Rounded CN", "Noto Sans SC", sans-serif'
-  code_font_family: '"Maple Mono Normal NL CN", "Fira Code", monospace'
+  font_family:
+  code_font_family:
 
 # Font settings for the site title and site subtitle
 blog_title_font:
@@ -1063,7 +1063,6 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    - <link rel="stylesheet" href="/styles/fonts.css">
     - <link rel="stylesheet" href="/styles/code-highlighting.css">
   bottom:
     # - <script src="xxxx"></script>
